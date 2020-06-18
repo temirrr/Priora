@@ -1,0 +1,10 @@
+commit d0d1f56b13145c1014191e7c7c0b1298c38e98f2
+tree e97057d168a4cc48b6b6cf87f0c52b291a4e500d
+parent f61ab50a5ceaa65ccacc6ba1033dc7388234eb7e
+author fesiib <tlekbay.b@gmail.com> 2020-06-19 02:55:25 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-19 02:55:25 +0900
+
+    Adding Trigger
+
+
+:100644 100644 0424351f8623d4fce1a5a0ef77ecdcdf57d63e3e 17027ec815c8a56b5f1916920a4624ca6581f73f M	Jenkinsfile

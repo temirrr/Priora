@@ -1,0 +1,441 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.39">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <org.jenkinsci.plugins.gwt.GenericCause plugin="generic-webhook-trigger@1.67">
+            <resolvedVariables class="tree-map">
+              <entry>
+                <string>ref</string>
+                <string>refs/heads/master</string>
+              </entry>
+            </resolvedVariables>
+            <postContent>{&quot;ref&quot;:&quot;refs/heads/master&quot;,&quot;before&quot;:&quot;c2d7fb5887ef0ba431dac1c96b73ffda085f5884&quot;,&quot;after&quot;:&quot;fdea96c125d98affb0f285822eef0e11be592ae3&quot;,&quot;repository&quot;:{&quot;id&quot;:273288866,&quot;node_id&quot;:&quot;MDEwOlJlcG9zaXRvcnkyNzMyODg4NjY=&quot;,&quot;name&quot;:&quot;simple-java-maven-app&quot;,&quot;full_name&quot;:&quot;fesiib/simple-java-maven-app&quot;,&quot;private&quot;:false,&quot;owner&quot;:{&quot;name&quot;:&quot;fesiib&quot;,&quot;email&quot;:&quot;42860511+fesiib@users.noreply.github.com&quot;,&quot;login&quot;:&quot;fesiib&quot;,&quot;id&quot;:42860511,&quot;node_id&quot;:&quot;MDQ6VXNlcjQyODYwNTEx&quot;,&quot;avatar_url&quot;:&quot;https://avatars2.githubusercontent.com/u/42860511?v=4&quot;,&quot;gravatar_id&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://api.github.com/users/fesiib&quot;,&quot;html_url&quot;:&quot;https://github.com/fesiib&quot;,&quot;followers_url&quot;:&quot;https://api.github.com/users/fesiib/followers&quot;,&quot;following_url&quot;:&quot;https://api.github.com/users/fesiib/following{/other_user}&quot;,&quot;gists_url&quot;:&quot;https://api.github.com/users/fesiib/gists{/gist_id}&quot;,&quot;starred_url&quot;:&quot;https://api.github.com/users/fesiib/starred{/owner}{/repo}&quot;,&quot;subscriptions_url&quot;:&quot;https://api.github.com/users/fesiib/subscriptions&quot;,&quot;organizations_url&quot;:&quot;https://api.github.com/users/fesiib/orgs&quot;,&quot;repos_url&quot;:&quot;https://api.github.com/users/fesiib/repos&quot;,&quot;events_url&quot;:&quot;https://api.github.com/users/fesiib/events{/privacy}&quot;,&quot;received_events_url&quot;:&quot;https://api.github.com/users/fesiib/received_events&quot;,&quot;type&quot;:&quot;User&quot;,&quot;site_admin&quot;:false},&quot;html_url&quot;:&quot;https://github.com/fesiib/simple-java-maven-app&quot;,&quot;description&quot;:&quot;For an introductory tutorial on how to use Jenkins to build a simple Java application with Maven.&quot;,&quot;fork&quot;:true,&quot;url&quot;:&quot;https://github.com/fesiib/simple-java-maven-app&quot;,&quot;forks_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/forks&quot;,&quot;keys_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/keys{/key_id}&quot;,&quot;collaborators_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/collaborators{/collaborator}&quot;,&quot;teams_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/teams&quot;,&quot;hooks_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/hooks&quot;,&quot;issue_events_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/issues/events{/number}&quot;,&quot;events_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/events&quot;,&quot;assignees_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/assignees{/user}&quot;,&quot;branches_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/branches{/branch}&quot;,&quot;tags_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/tags&quot;,&quot;blobs_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/git/blobs{/sha}&quot;,&quot;git_tags_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/git/tags{/sha}&quot;,&quot;git_refs_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/git/refs{/sha}&quot;,&quot;trees_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/git/trees{/sha}&quot;,&quot;statuses_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/statuses/{sha}&quot;,&quot;languages_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/languages&quot;,&quot;stargazers_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/stargazers&quot;,&quot;contributors_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/contributors&quot;,&quot;subscribers_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/subscribers&quot;,&quot;subscription_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/subscription&quot;,&quot;commits_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/commits{/sha}&quot;,&quot;git_commits_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/git/commits{/sha}&quot;,&quot;comments_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/comments{/number}&quot;,&quot;issue_comment_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/issues/comments{/number}&quot;,&quot;contents_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/contents/{+path}&quot;,&quot;compare_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/compare/{base}...{head}&quot;,&quot;merges_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/merges&quot;,&quot;archive_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/{archive_format}{/ref}&quot;,&quot;downloads_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/downloads&quot;,&quot;issues_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/issues{/number}&quot;,&quot;pulls_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/pulls{/number}&quot;,&quot;milestones_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/milestones{/number}&quot;,&quot;notifications_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/notifications{?since,all,participating}&quot;,&quot;labels_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/labels{/name}&quot;,&quot;releases_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/releases{/id}&quot;,&quot;deployments_url&quot;:&quot;https://api.github.com/repos/fesiib/simple-java-maven-app/deployments&quot;,&quot;created_at&quot;:1592497997,&quot;updated_at&quot;:&quot;2020-06-18T18:26:40Z&quot;,&quot;pushed_at&quot;:1592507344,&quot;git_url&quot;:&quot;git://github.com/fesiib/simple-java-maven-app.git&quot;,&quot;ssh_url&quot;:&quot;git@github.com:fesiib/simple-java-maven-app.git&quot;,&quot;clone_url&quot;:&quot;https://github.com/fesiib/simple-java-maven-app.git&quot;,&quot;svn_url&quot;:&quot;https://github.com/fesiib/simple-java-maven-app&quot;,&quot;homepage&quot;:&quot;&quot;,&quot;size&quot;:15,&quot;stargazers_count&quot;:0,&quot;watchers_count&quot;:0,&quot;language&quot;:&quot;Java&quot;,&quot;has_issues&quot;:false,&quot;has_projects&quot;:true,&quot;has_downloads&quot;:true,&quot;has_wiki&quot;:true,&quot;has_pages&quot;:false,&quot;forks_count&quot;:0,&quot;mirror_url&quot;:null,&quot;archived&quot;:false,&quot;disabled&quot;:false,&quot;open_issues_count&quot;:0,&quot;license&quot;:null,&quot;forks&quot;:0,&quot;open_issues&quot;:0,&quot;watchers&quot;:0,&quot;default_branch&quot;:&quot;master&quot;,&quot;stargazers&quot;:0,&quot;master_branch&quot;:&quot;master&quot;},&quot;pusher&quot;:{&quot;name&quot;:&quot;fesiib&quot;,&quot;email&quot;:&quot;42860511+fesiib@users.noreply.github.com&quot;},&quot;sender&quot;:{&quot;login&quot;:&quot;fesiib&quot;,&quot;id&quot;:42860511,&quot;node_id&quot;:&quot;MDQ6VXNlcjQyODYwNTEx&quot;,&quot;avatar_url&quot;:&quot;https://avatars2.githubusercontent.com/u/42860511?v=4&quot;,&quot;gravatar_id&quot;:&quot;&quot;,&quot;url&quot;:&quot;https://api.github.com/users/fesiib&quot;,&quot;html_url&quot;:&quot;https://github.com/fesiib&quot;,&quot;followers_url&quot;:&quot;https://api.github.com/users/fesiib/followers&quot;,&quot;following_url&quot;:&quot;https://api.github.com/users/fesiib/following{/other_user}&quot;,&quot;gists_url&quot;:&quot;https://api.github.com/users/fesiib/gists{/gist_id}&quot;,&quot;starred_url&quot;:&quot;https://api.github.com/users/fesiib/starred{/owner}{/repo}&quot;,&quot;subscriptions_url&quot;:&quot;https://api.github.com/users/fesiib/subscriptions&quot;,&quot;organizations_url&quot;:&quot;https://api.github.com/users/fesiib/orgs&quot;,&quot;repos_url&quot;:&quot;https://api.github.com/users/fesiib/repos&quot;,&quot;events_url&quot;:&quot;https://api.github.com/users/fesiib/events{/privacy}&quot;,&quot;received_events_url&quot;:&quot;https://api.github.com/users/fesiib/received_events&quot;,&quot;type&quot;:&quot;User&quot;,&quot;site_admin&quot;:false},&quot;created&quot;:false,&quot;deleted&quot;:false,&quot;forced&quot;:false,&quot;base_ref&quot;:null,&quot;compare&quot;:&quot;https://github.com/fesiib/simple-java-maven-app/compare/c2d7fb5887ef...fdea96c125d9&quot;,&quot;commits&quot;:[{&quot;id&quot;:&quot;fdea96c125d98affb0f285822eef0e11be592ae3&quot;,&quot;tree_id&quot;:&quot;729c743564f1b2901cbd45d5adfc927efb42f8ad&quot;,&quot;distinct&quot;:true,&quot;message&quot;:&quot;trigger check&quot;,&quot;timestamp&quot;:&quot;2020-06-19T04:08:52+09:00&quot;,&quot;url&quot;:&quot;https://github.com/fesiib/simple-java-maven-app/commit/fdea96c125d98affb0f285822eef0e11be592ae3&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;fesiib&quot;,&quot;email&quot;:&quot;tlekbay.b@gmail.com&quot;,&quot;username&quot;:&quot;fesiib&quot;},&quot;committer&quot;:{&quot;name&quot;:&quot;fesiib&quot;,&quot;email&quot;:&quot;tlekbay.b@gmail.com&quot;,&quot;username&quot;:&quot;fesiib&quot;},&quot;added&quot;:[],&quot;removed&quot;:[],&quot;modified&quot;:[&quot;Jenkinsfile&quot;]}],&quot;head_commit&quot;:{&quot;id&quot;:&quot;fdea96c125d98affb0f285822eef0e11be592ae3&quot;,&quot;tree_id&quot;:&quot;729c743564f1b2901cbd45d5adfc927efb42f8ad&quot;,&quot;distinct&quot;:true,&quot;message&quot;:&quot;trigger check&quot;,&quot;timestamp&quot;:&quot;2020-06-19T04:08:52+09:00&quot;,&quot;url&quot;:&quot;https://github.com/fesiib/simple-java-maven-app/commit/fdea96c125d98affb0f285822eef0e11be592ae3&quot;,&quot;author&quot;:{&quot;name&quot;:&quot;fesiib&quot;,&quot;email&quot;:&quot;tlekbay.b@gmail.com&quot;,&quot;username&quot;:&quot;fesiib&quot;},&quot;committer&quot;:{&quot;name&quot;:&quot;fesiib&quot;,&quot;email&quot;:&quot;tlekbay.b@gmail.com&quot;,&quot;username&quot;:&quot;fesiib&quot;},&quot;added&quot;:[],&quot;removed&quot;:[],&quot;modified&quot;:[&quot;Jenkinsfile&quot;]}}</postContent>
+            <printContributedVariables>true</printContributedVariables>
+            <printPostContent>true</printPostContent>
+            <cause>Triggered on refs/heads/master</cause>
+          </org.jenkinsci.plugins.gwt.GenericCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>ref</name>
+          <description></description>
+          <value>refs/heads/master</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>ref</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.16">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.7.0">
+      <stagesUUID>14ed6364-3ece-466a-8cff-325a52c6f869</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@1.7.0">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Before All</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                                <value class="string">&quot;echo ${env.ref}&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Build</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">mvn -B -DskipTests clean package</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <post>
+                  <conditions>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                      <condition>always</condition>
+                      <branch>
+                        <name>default</name>
+                        <steps>
+                          <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                            <name>junit</name>
+                            <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                              <arguments class="linked-hash-map">
+                                <entry>
+                                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                    <key>testResults</key>
+                                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                    <value class="string">target/surefire-reports/*.xml</value>
+                                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                </entry>
+                              </arguments>
+                            </args>
+                          </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        </steps>
+                      </branch>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                  </conditions>
+                </post>
+                <name>Test</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">echo Hello World</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">mvn test</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Deliver</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>script</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">./jenkins/scripts/deliver.sh</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>14ed6364-3ece-466a-8cff-325a52c6f869</uuid>
+          </stages>
+          <agent>
+            <agentType>
+              <key>any</key>
+            </agentType>
+          </agent>
+          <triggers>
+            <triggers>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTTrigger>
+                <name>GenericTrigger</name>
+                <args>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>genericVariables</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$GStringValue">
+                      <value class="string">${[
+                [key: &apos;ref&apos;, value: &apos;$.ref&apos;]
+            ]}</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>causeString</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">Triggered on $ref</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>token</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">test</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>printContributedVariables</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="boolean">true</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>printPostContent</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="boolean">true</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>silentResponse</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="boolean">false</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>regexpFilterText</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">$ref</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>regexpFilterExpression</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$GStringValue">
+                      <value class="string">${&apos;refs/heads/&apos;+&quot;master&quot;}</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                </args>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTTrigger>
+            </triggers>
+          </triggers>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <hudson.plugins.git.util.BuildData plugin="git@4.1.0">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.2.1">
+              <sha1>fdea96c125d98affb0f285822eef0e11be592ae3</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>29</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/fesiib/simple-java-maven-app</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@4.1.0">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/work/workspace/test-project</ws>
+    </hudson.plugins.git.GitTagAction>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.11">
+      <revisionStates>
+        <entry>
+          <string>git https://github.com/fesiib/simple-java-maven-app</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2.80">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <hudson.tasks.junit.TestResultAction plugin="junit@1.29">
+      <descriptions class="concurrent-hash-map"/>
+      <failCount>1</failCount>
+      <skipCount>0</skipCount>
+      <totalCount>2</totalCount>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <testData/>
+    </hudson.tasks.junit.TestResultAction>
+  </actions>
+  <queueId>36</queueId>
+  <timestamp>1592507654082</timestamp>
+  <startTime>1592507654131</startTime>
+  <result>FAILURE</result>
+  <duration>23412</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>pipeline {
+    agent any
+    triggers {
+        GenericTrigger(
+            genericVariables: [
+                [key: &apos;ref&apos;, value: &apos;$.ref&apos;]
+            ],
+
+            causeString: &apos;Triggered on $ref&apos;,
+
+            token: &apos;test&apos;,
+
+            printContributedVariables: true,
+            printPostContent: true,
+
+            silentResponse: false,
+
+            regexpFilterText: &apos;$ref&apos;,
+            regexpFilterExpression: &apos;refs/heads/&apos; + &quot;master&quot;
+        )
+    }
+    stages {
+        stage(&apos;Before All&apos;) {
+            steps {
+                sh &quot;echo ${env.ref}&quot;
+            }
+        }
+        stage(&apos;Build&apos;) {
+            steps {
+                sh &apos;mvn -B -DskipTests clean package&apos;
+            }
+        }
+        stage(&apos;Test&apos;) {
+            steps {
+                sh &quot;echo Hello World&quot;
+                sh &apos;mvn test&apos;
+            }
+            post {
+                always {
+                    junit &apos;target/surefire-reports/*.xml&apos;
+                }
+            }
+        }
+        stage(&apos;Deliver&apos;) {
+            steps {
+                sh &apos;./jenkins/scripts/deliver.sh&apos;
+            }
+        }
+    }
+}
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>4553521458</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>165614107</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>7793415284</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>28999397</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>246559386</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>37</iota>
+    <head>1:37</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@4.1.0">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://github.com/fesiib/simple-java-maven-app</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="list"/>
+        <extensions/>
+      </scm>
+      <node></node>
+      <workspace>/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/work/workspace/test-project</workspace>
+      <changelogFile>/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/work/jobs/test-project/builds/29/changelog2236584677633685566.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

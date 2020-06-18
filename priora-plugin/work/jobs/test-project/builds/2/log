@@ -1,0 +1,5 @@
+Started by user unknown or anonymous
+Lightweight checkout support not available, falling back to full checkout.
+Checking out hudson.scm.NullSCM into /home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/work/workspace/test-project@script to read Jenkinsfile
+ERROR: /home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/work/workspace/test-project@script/Jenkinsfile not found
+Finished: FAILURE

@@ -1,0 +1,29 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.35">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>2</queueId>
+  <timestamp>1592492428146</timestamp>
+  <startTime>1592492428190</startTime>
+  <result>FAILURE</result>
+  <duration>122</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.scm.NullSCM"/>
+      <node></node>
+      <workspace>/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/work/workspace/test-project@script</workspace>
+      <changelogFile>/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/work/jobs/test-project/builds/2/changelog3697507264328578862.xml</changelogFile>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

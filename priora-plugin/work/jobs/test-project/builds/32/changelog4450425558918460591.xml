@@ -1,0 +1,20 @@
+commit 3177ba04eb35bbecd554b0cd49e16ae68df3361c
+tree ab9167a01be6aeb68025ca9766e466ea9570b032
+parent 16a1b2075237e6bf43460753ebf9c28cdd7dc060
+author fesiib <tlekbay.b@gmail.com> 2020-06-19 04:23:40 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-19 04:23:40 +0900
+
+    branch_name check
+
+
+:100644 100644 301a63bd3d49c585dcc21c6a89ebca0d275bc24b 8efde00d6fd89124d046e83bb7477cea4ca21b9e M	Jenkinsfile
+commit 16a1b2075237e6bf43460753ebf9c28cdd7dc060
+tree 71f1b066150f0c3043391a72f8680500bb871f34
+parent 5b042bdd306fbfda31a052d4ec4776c01aa5a8d7
+author fesiib <tlekbay.b@gmail.com> 2020-06-19 04:21:43 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-19 04:21:43 +0900
+
+    branch_name check
+
+
+:100644 100644 818953ffa14c87c9798de28c725aa8b7c8aa8364 301a63bd3d49c585dcc21c6a89ebca0d275bc24b M	Jenkinsfile
