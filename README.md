@@ -9,6 +9,7 @@ Maven v(latest), Java (8)
 
 ### Run Jenkins Locally
 In the ./priora-plugin/ directory
+
 `
 $ mvn hpi:run
 `
@@ -26,7 +27,9 @@ https://github.com/cs453-team3/test-project (Must be cloned or pulled manually)
     
 ### Guidelines for Build Trigger
 Register at https://ngrok.com
+
 Following steps, launch  public URL and add Webhook in Settings of test-project repository
+
 Should work, if any problem contact @fesiib
 
 ### TODO: Integrate Benchmark
