@@ -19,12 +19,12 @@ Directories:
 Test Project:
     https://github.com/cs453-team3/test-project (Must be cloned or pulled manually)
     
-    Guidelines for Build Trigger:
-        Register at https://ngrok.com
-        Following steps, launch  public URL and add Webhook in Settings of test-project repository
-        Should work, if any problem contact @fesiib
+Guidelines for Build Trigger:
+    Register at https://ngrok.com
+    Following steps, launch  public URL and add Webhook in Settings of test-project repository
+    Should work, if any problem contact @fesiib
 
-    TODO: Integrate Benchmark
+TODO: Integrate Benchmark
 
 Pipeline:
     This Jenkins instance is based on Pipeline located in repo cs453-team3/test-project/Jenkinsfile
