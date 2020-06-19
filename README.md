@@ -8,9 +8,9 @@ CI-Integrated Test Prioritization Tool
 Maven v(latest), Java (8)
 
 ### Run Jenkins Locally
-'''
+`
 $ mvn hpi:run
-'''
+`
 
 ### Directories
 priora-plugin:
