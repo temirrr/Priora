@@ -10,11 +10,11 @@ Run Jenkins Locally: $ mvn hpi:run
 
 Directories:
     priora-plugin:
-        -src - source code of plugin
-        -target - built files of plugin
-        -test-project - test project, currently just simple-maven-project. can be replaced with benchmark
-            Must separately pull from or clone https://github.com/cs453-team3/test-project
-        -work - Data from Jenkins run
+        * src - source code of plugin
+        * target - built files of plugin
+        * test-project - test project, currently just simple-maven-project. can be replaced with benchmark
+            - Must separately pull from or clone https://github.com/cs453-team3/test-project
+        * work - Data from Jenkins run
 
 Test Project:
     https://github.com/cs453-team3/test-project (Must be cloned or pulled manually)
