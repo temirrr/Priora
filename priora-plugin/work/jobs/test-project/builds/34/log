@@ -1,0 +1,173 @@
+Triggered on refs/heads/master
+GenericWebhookEnvironmentContributor
+ Received:
+
+{"ref":"refs/heads/master","before":"52e35a143b30d01fce8f256552c1574459bc38c2","after":"a02b45855ee50420197f6097de635ee80b9706d7","repository":{"id":273383897,"node_id":"MDEwOlJlcG9zaXRvcnkyNzMzODM4OTc=","name":"test-project","full_name":"cs453-team3/test-project","private":false,"owner":{"name":"cs453-team3","email":null,"login":"cs453-team3","id":67132487,"node_id":"MDEyOk9yZ2FuaXphdGlvbjY3MTMyNDg3","avatar_url":"https://avatars3.githubusercontent.com/u/67132487?v=4","gravatar_id":"","url":"https://api.github.com/users/cs453-team3","html_url":"https://github.com/cs453-team3","followers_url":"https://api.github.com/users/cs453-team3/followers","following_url":"https://api.github.com/users/cs453-team3/following{/other_user}","gists_url":"https://api.github.com/users/cs453-team3/gists{/gist_id}","starred_url":"https://api.github.com/users/cs453-team3/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/cs453-team3/subscriptions","organizations_url":"https://api.github.com/users/cs453-team3/orgs","repos_url":"https://api.github.com/users/cs453-team3/repos","events_url":"https://api.github.com/users/cs453-team3/events{/privacy}","received_events_url":"https://api.github.com/users/cs453-team3/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/cs453-team3/test-project","description":null,"fork":false,"url":"https://github.com/cs453-team3/test-project","forks_url":"https://api.github.com/repos/cs453-team3/test-project/forks","keys_url":"https://api.github.com/repos/cs453-team3/test-project/keys{/key_id}","collaborators_url":"https://api.github.com/repos/cs453-team3/test-project/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/cs453-team3/test-project/teams","hooks_url":"https://api.github.com/repos/cs453-team3/test-project/hooks","issue_events_url":"https://api.github.com/repos/cs453-team3/test-project/issues/events{/number}","events_url":"https://api.github.com/repos/cs453-team3/test-project/events","assignees_url":"https://api.github.com/repos/cs453-team3/test-project/assignees{/user}","branches_url":"https://api.github.com/repos/cs453-team3/test-project/branches{/branch}","tags_url":"https://api.github.com/repos/cs453-team3/test-project/tags","blobs_url":"https://api.github.com/repos/cs453-team3/test-project/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/cs453-team3/test-project/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/cs453-team3/test-project/git/refs{/sha}","trees_url":"https://api.github.com/repos/cs453-team3/test-project/git/trees{/sha}","statuses_url":"https://api.github.com/repos/cs453-team3/test-project/statuses/{sha}","languages_url":"https://api.github.com/repos/cs453-team3/test-project/languages","stargazers_url":"https://api.github.com/repos/cs453-team3/test-project/stargazers","contributors_url":"https://api.github.com/repos/cs453-team3/test-project/contributors","subscribers_url":"https://api.github.com/repos/cs453-team3/test-project/subscribers","subscription_url":"https://api.github.com/repos/cs453-team3/test-project/subscription","commits_url":"https://api.github.com/repos/cs453-team3/test-project/commits{/sha}","git_commits_url":"https://api.github.com/repos/cs453-team3/test-project/git/commits{/sha}","comments_url":"https://api.github.com/repos/cs453-team3/test-project/comments{/number}","issue_comment_url":"https://api.github.com/repos/cs453-team3/test-project/issues/comments{/number}","contents_url":"https://api.github.com/repos/cs453-team3/test-project/contents/{+path}","compare_url":"https://api.github.com/repos/cs453-team3/test-project/compare/{base}...{head}","merges_url":"https://api.github.com/repos/cs453-team3/test-project/merges","archive_url":"https://api.github.com/repos/cs453-team3/test-project/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/cs453-team3/test-project/downloads","issues_url":"https://api.github.com/repos/cs453-team3/test-project/issues{/number}","pulls_url":"https://api.github.com/repos/cs453-team3/test-project/pulls{/number}","milestones_url":"https://api.github.com/repos/cs453-team3/test-project/milestones{/number}","notifications_url":"https://api.github.com/repos/cs453-team3/test-project/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/cs453-team3/test-project/labels{/name}","releases_url":"https://api.github.com/repos/cs453-team3/test-project/releases{/id}","deployments_url":"https://api.github.com/repos/cs453-team3/test-project/deployments","created_at":1592532864,"updated_at":"2020-06-19T02:17:48Z","pushed_at":1592534115,"git_url":"git://github.com/cs453-team3/test-project.git","ssh_url":"git@github.com:cs453-team3/test-project.git","clone_url":"https://github.com/cs453-team3/test-project.git","svn_url":"https://github.com/cs453-team3/test-project","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":"Java","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"forks":0,"open_issues":0,"watchers":0,"default_branch":"master","stargazers":0,"master_branch":"master","organization":"cs453-team3"},"pusher":{"name":"fesiib","email":"42860511+fesiib@users.noreply.github.com"},"organization":{"login":"cs453-team3","id":67132487,"node_id":"MDEyOk9yZ2FuaXphdGlvbjY3MTMyNDg3","url":"https://api.github.com/orgs/cs453-team3","repos_url":"https://api.github.com/orgs/cs453-team3/repos","events_url":"https://api.github.com/orgs/cs453-team3/events","hooks_url":"https://api.github.com/orgs/cs453-team3/hooks","issues_url":"https://api.github.com/orgs/cs453-team3/issues","members_url":"https://api.github.com/orgs/cs453-team3/members{/member}","public_members_url":"https://api.github.com/orgs/cs453-team3/public_members{/member}","avatar_url":"https://avatars3.githubusercontent.com/u/67132487?v=4","description":null},"sender":{"login":"fesiib","id":42860511,"node_id":"MDQ6VXNlcjQyODYwNTEx","avatar_url":"https://avatars2.githubusercontent.com/u/42860511?v=4","gravatar_id":"","url":"https://api.github.com/users/fesiib","html_url":"https://github.com/fesiib","followers_url":"https://api.github.com/users/fesiib/followers","following_url":"https://api.github.com/users/fesiib/following{/other_user}","gists_url":"https://api.github.com/users/fesiib/gists{/gist_id}","starred_url":"https://api.github.com/users/fesiib/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/fesiib/subscriptions","organizations_url":"https://api.github.com/users/fesiib/orgs","repos_url":"https://api.github.com/users/fesiib/repos","events_url":"https://api.github.com/users/fesiib/events{/privacy}","received_events_url":"https://api.github.com/users/fesiib/received_events","type":"User","site_admin":false},"created":false,"deleted":false,"forced":false,"base_ref":null,"compare":"https://github.com/cs453-team3/test-project/compare/52e35a143b30...a02b45855ee5","commits":[{"id":"a02b45855ee50420197f6097de635ee80b9706d7","tree_id":"5702f24e05cdf89c062ede8f5e6ac0fbbaf8a084","distinct":true,"message":"Checking Trigger","timestamp":"2020-06-19T11:35:02+09:00","url":"https://github.com/cs453-team3/test-project/commit/a02b45855ee50420197f6097de635ee80b9706d7","author":{"name":"fesiib","email":"tlekbay.b@gmail.com","username":"fesiib"},"committer":{"name":"fesiib","email":"tlekbay.b@gmail.com","username":"fesiib"},"added":[],"removed":[],"modified":["README.md"]}],"head_commit":{"id":"a02b45855ee50420197f6097de635ee80b9706d7","tree_id":"5702f24e05cdf89c062ede8f5e6ac0fbbaf8a084","distinct":true,"message":"Checking Trigger","timestamp":"2020-06-19T11:35:02+09:00","url":"https://github.com/cs453-team3/test-project/commit/a02b45855ee50420197f6097de635ee80b9706d7","author":{"name":"fesiib","email":"tlekbay.b@gmail.com","username":"fesiib"},"committer":{"name":"fesiib","email":"tlekbay.b@gmail.com","username":"fesiib"},"added":[],"removed":[],"modified":["README.md"]}}
+
+
+Contributing variables:
+
+    ref = refs/heads/master
+
+
+Obtained Jenkinsfile from git https://github.com/cs453-team3/test-project
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4K86Yp3d86CtkDjotyI2vGr3NMtxyV3hcXjIQmvwrfPPAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4N4rNWdlsNzXgBwl4QgjJ/WLfoqxAXWJi9XQBFv4TyqPAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4F/JntmAcWQufDx8NgTERa1AI0ffi4BNcXd4aW2x9AmjAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project
+[8mha:////4GEAY069x2FAoihxymodPa1QXa6NF/v/JZv1k1cy7jdgAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4JIEeIyBML3IMz5tPJulOwxUuWjNcByJAl+SgNMBCfZOAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4IA/nIV2lpMsY/xBlkpX+T3otC1n5SnE42umjpx0CWURAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4JI+Hcd9E2WsPggUcSdIT+qg46pj1OahCmKUG7BudposAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/cs453-team3/test-project # timeout=10
+Fetching upstream changes from https://github.com/cs453-team3/test-project
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/cs453-team3/test-project +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision a02b45855ee50420197f6097de635ee80b9706d7 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a02b45855ee50420197f6097de635ee80b9706d7 # timeout=10
+Commit message: "Checking Trigger"
+ > git rev-list --no-walk 52e35a143b30d01fce8f256552c1574459bc38c2 # timeout=10
+[8mha:////4OATxRgs/5E0MFAh4PWRosb8J1t4aO/vZv61MShv7qEnAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4FhrV2KZ1omTZuWaShWTmXDYVWyN6gETP7l03QmdjlH5AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4HUtqzjlS/kRAEAEFrW3bDp11mvmlTbZIQyTjNOYP4dDAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4CZkMvjzherq9Mxgja5Z9+TafqZE18gdYkhmDLsDlieLAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4J0CauLQwCiO/Ft4W+VtOoIP0wA2+pJqL+Bytw9VEatAAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[8mha:////4BLDMAN+Z371Ge7eVDfCffP9EjB0x0F4Ekn4nOG0dKKtAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (Before All)
+[8mha:////4OQ81wNXZTwm9jQXY7IbGOUG+1IbRMz/Im70Cm5OW1QTAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] sh
++ echo refs/heads/master
+refs/heads/master
+[8mha:////4FwS2ZFeiJzhIuQdtDtdCg4LC3ZnceVIy7dolh+KKLsnAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N7BnLt++AAAA[0m[Pipeline] }
+[8mha:////4FiQWyyN0RKjhUUMpCY9sbL1IcmKchyZk4hTtN9L5eTWAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N4glvS6+AAAA[0m[Pipeline] // stage
+[8mha:////4Oqcd0xCPqGnSTQHlO9ZV2oWt/KUQ4B4t5/M0iBkE7AHAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUnRgQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9ANydZ8vCAAAA[0m[Pipeline] stage
+[8mha:////4HHtmQlKPgpqd2WBaZJlPxODRw6ri0Jg9UuinAwbdv/XAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUTCAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0rlhNLCAAAA[0m[Pipeline] { (Build)
+[8mha:////4Ey2njfYweNVOcteV3en1UaVYeHcY20pQE4aXISR7Kd/AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiOhCiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBr2eB0O+AAAA[0m[Pipeline] sh
++ mvn -B -DskipTests clean package
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building my-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ my-app ---
+[INFO] Deleting /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ my-app ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ my-app ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ my-app ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ my-app ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ my-app ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ my-app ---
+[INFO] Building jar: /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/target/my-app-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.091 s
+[INFO] Finished at: 2020-06-19T11:37:35+09:00
+[INFO] Final Memory: 17M/167M
+[INFO] ------------------------------------------------------------------------
+[8mha:////4LgOBfxQcJM/8r3zOciDnpwXu/zn8SUXA7CvZjkwkgPaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICVEgoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AEWNdkpvgAAAA==[0m[Pipeline] }
+[8mha:////4Pzk7m0mRhttMymF0Mi4RTfmAKior59i9EUkwHZN3jNeAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKi0FAgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3da768AEi+zpyvgAAAA==[0m[Pipeline] // stage
+[8mha:////4Is/sdw1HyXO6DMqQKHXq1mp+ek90OmJ4fJV0HajXU9fAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohU7YqYWKMunCCkISSN/m+TlHbiRFyNOxCoxIQHy7ZkvecLyhjgSMFwp7G3GJXlg59MTnym0F89zdzRhSvCSF7zVs8tdfq01paShlUFg42ArUblKVo0CXbCybusvERTnVPI20EAs90IDyhEJicZ0rcsAfa3qYuEP85fACxDAlbX2Zrm8yzf8hZCqsIAAAA=[0m[Pipeline] stage
+[8mha:////4L+XrYL+Wp3+DDeufz0kwNRLMjupRf0F3VqaJ/AKn2M4AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUKiNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPpnFij8IAAAA=[0m[Pipeline] { (Test)
+[8mha:////4DHS5MU8XbfrWBj2q7TFWrh4OFgU69rnrJYbBB6GxNe3AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAR2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBrANZ3i+AAAA[0m[Pipeline] sh
++ echo Hello World
+Hello World
+[8mha:////4BCVQequEa+lbDQLBeuXUZ/9O8FcGBVf2kKW1cBtjClzAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN/E8fGG+AAAA[0m[Pipeline] sh
++ mvn test
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building my-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ my-app ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ my-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ my-app ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ my-app ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ my-app ---
+[INFO] Surefire report directory: /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.mycompany.app.AppTest
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec <<< FAILURE! - in com.mycompany.app.AppTest
+testAppMain(com.mycompany.app.AppTest)  Time elapsed: 0.011 sec  <<< FAILURE!
+java.lang.AssertionError: "message" is not "Hello World!"
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.mycompany.app.AppTest.testAppMain(AppTest.java:39)
+
+
+Results :
+
+Failed tests: 
+  AppTest.testAppMain:39 "message" is not "Hello World!"
+
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.586 s
+[INFO] Finished at: 2020-06-19T11:37:43+09:00
+[INFO] Final Memory: 10M/166M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test) on project my-app: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/work/workspace/test-project/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Post stage
+[8mha:////4L8EmfCICU1DMPYKkKVHHLtO23fv91SHNYTahAmVjFvFAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigUSDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAEyb1FKvgAAAA==[0m[Pipeline] junit
+Recording test results
+[8mha:////4FQDhtnDuAh78SIFqp1hVfQyvfJt7Zxigy44oubES0G/AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQUGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQHljyOIvgAAAA==[0m[Pipeline] }
+[8mha:////4FpKW/aMH3mlikJg8+nQHqu+GY9Tqh3vGoy4Y+bhDN+aAAAApB+LCAAAAAAAAP9tjbEOwiAURV9rHFwd/QiadDIxTq6ExS/AFhFK3qNApZNf5K/5D6JNnLzDzT13Oc8XrGOAIwXNrMLBYOwM827SZbFMYbg6yszShXWEkZxiQmVBvTotKCgpWFLVsOKwUdg5igZ1gi238i4bJ1E35xTKd+BQm36EB1S8mJMM6QtzgN1t6iPhz/NXALP3Cep2/6n2DaYNcg6+AAAA[0m[Pipeline] // stage
+[8mha:////4NXFEXQASZ2VhfhQ2KdOLsksOIMKKcK+A7WRut/RCqBUAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUOIqWvUhROEJoSk0f8lSUknTsTVuAOBSkx4sGxL1nu+oAoejuQ1swoHg6E3bHSTzokl8sPFUWKWzqwnDOQU61TqSKp2qR1FBYuKElYc1gp7R8GgjrDhVtxF7QTq+hR93g4cSiNv8ICCZ3IUPn7L7GF7nWQg/HH+AmAeI5RNk223/zyrNzHmhcDCAAAA[0m[Pipeline] stage
+[8mha:////4Ba3BSmSs1MqtZqroJbcwW6Y6WoYN3BwzdYjdDECQIC/AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUwYRQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCi3+2y7zedZvQH4j6CMwgAAAA==[0m[Pipeline] { (Deliver)
+Stage "Deliver" skipped due to earlier failure(s)
+[8mha:////4CeV9fqXrpiEvAYGRNALiUU5ZqHZE6laz4tunaMb7JKiAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICokRUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFkKPe7T23ftwcfeL4AAAA=[0m[Pipeline] }
+[8mha:////4H9iMeCTM/HBVbRcCkMl5mgIov6bdoWXDcjVTK3XRLZqAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihQohqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3da768AH8/EyevgAAAA==[0m[Pipeline] // stage
+[8mha:////4II25sVCLNizMRrZQppsleMRRkIcB+vC6ZFonjiz735UAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJRlBJR0VppeIGJjXFi3Tn2haTiRXyNP2ARiYotVjvbzOsN2xThRNGK3uDgMHVOBD/ZvMRMcbh5mkVPV9ERJvJGtGZuSZvzii2xgTVFCRsJO4Odp+TQMuxlrx6q8gptdeGYv6OE0ukRnlDIbGYV+QtLhMN90onw5/krgCUEhrJpctX1B6j05nC+AAAA[0m[Pipeline] }
+[8mha:////4Ph8o2xOwjho0PF4wny4Fvqu3lzvwdEZW6Hj5Kh36lD1AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICgg6lorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYhQrk/5NptP4b05Bq+AAAA[0m[Pipeline] // withEnv
+[8mha:////4EH9V2YTBZrWVDvNvTXtLF0yV5m21uWlF7MWXLs1CFAKAAAAox+LCAAAAAAAAP9tjTESgjAQRT84FraWHiIUauVY2WZoPEGEGAOZXUwWofJEXs07yMiMlb/67zXv9cYyRRw5OtVYaj2lyqsu9G56auDYXgMPquGLqpgSB6tKO5Rc29OMJYvFvCzHQmNlqQqcPDnBWjfmYYpgyBVniZM7aOS+vuOJTE9lMVG+MEZsbn2dmH6dvwGMXSfIt3tBtvsA/gVtV70AAAA=[0m[Pipeline] }
+[8mha:////4MacXMbWP9loyV/NumZJb9ZhiS8Fv+LBbuT/f3/tLH4DAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IMJC7GybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8FebkXZOUHjeqpjr0AAAA=[0m[Pipeline] // node
+[8mha:////4GhpFshg7Yul8qBmtLAsNvZyu3V3MBK15HIxcWuVdK3UAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRoKBAVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Lu9INt+AKvzzsS9AAAA[0m[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE

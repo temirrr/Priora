@@ -1,0 +1,10 @@
+commit a02b45855ee50420197f6097de635ee80b9706d7
+tree 5702f24e05cdf89c062ede8f5e6ac0fbbaf8a084
+parent 52e35a143b30d01fce8f256552c1574459bc38c2
+author fesiib <tlekbay.b@gmail.com> 2020-06-19 11:35:02 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-19 11:35:02 +0900
+
+    Checking Trigger
+
+
+:100644 100644 b20d3b1628c99385a68f909a2b6bb3157c605413 4187c5e60b37136f87ce3996032cf419260c5351 M	README.md

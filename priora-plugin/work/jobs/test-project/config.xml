@@ -20,11 +20,8 @@
           <spec></spec>
           <genericVariables>
             <org.jenkinsci.plugins.gwt.GenericVariable>
-              <expressionType>JSONPath</expressionType>
               <key>ref</key>
               <value>$.ref</value>
-              <regexpFilter></regexpFilter>
-              <defaultValue></defaultValue>
             </org.jenkinsci.plugins.gwt.GenericVariable>
           </genericVariables>
           <regexpFilterText>$ref</regexpFilterText>
@@ -44,7 +41,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>https://github.com/fesiib/simple-java-maven-app</url>
+          <url>https://github.com/cs453-team3/test-project</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
