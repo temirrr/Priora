@@ -7,10 +7,11 @@ Directories:
         -src - source code of plugin
         -target - built files of plugin
         -test-project - test project, currently just simple-maven-project. can be replaced with benchmark
+            Must separately pull from or clone https://github.com/fesiib/simple-java-maven-app
         -work - Data from Jenkins run
 
 Test Project:
-    https://github.com/fesiib/simple-java-maven-app
+    https://github.com/fesiib/simple-java-maven-app (Must be cloned or pulled manually)
     
     Guidelines for Build Trigger:
         Register at https://ngrok.com
