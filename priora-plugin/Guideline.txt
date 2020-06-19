@@ -1,6 +1,6 @@
 Soft: Maven v(latest), Java (8)
 
-Run Jenkins Locally: $mvn hpi:run
+Run Jenkins Locally: $ mvn hpi:run
 
 Directories:
     priora-plugin:
@@ -14,11 +14,10 @@ Test Project:
     
     Guidelines for Build Trigger:
         Register at https://ngrok.com
-        Following steps launch  public URL and add Webhook in Settings of test-project repository
+        Following steps, launch  public URL and add Webhook in Settings of test-project repository
         Should work, if any problem contact @fesiib
 
     TODO: Integrate Benchmark
 
 Pipeline:
     This Jenkins instance is based on Pipeline located in Priora/priora-plugin/test-project/simple-java-maven-app/Jenkinsfile
-    
