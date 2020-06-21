@@ -26,28 +26,6 @@ public class Messages {
     private final static ResourceBundleHolder holder = ResourceBundleHolder.get(Messages.class);
 
     /**
-     * Key {@code HelloWorldBuilder.DescriptorImpl.DisplayName}: {@code Say
-     * hello world}.
-     * 
-     * @return
-     *     {@code Say hello world}
-     */
-    public static String HelloWorldBuilder_DescriptorImpl_DisplayName() {
-        return holder.format("HelloWorldBuilder.DescriptorImpl.DisplayName");
-    }
-
-    /**
-     * Key {@code HelloWorldBuilder.DescriptorImpl.DisplayName}: {@code Say
-     * hello world}.
-     * 
-     * @return
-     *     {@code Say hello world}
-     */
-    public static Localizable _HelloWorldBuilder_DescriptorImpl_DisplayName() {
-        return new Localizable(holder, "HelloWorldBuilder.DescriptorImpl.DisplayName");
-    }
-
-    /**
      * Key {@code HelloWorldBuilder.DescriptorImpl.warnings.tooShort}: {@code
      * Isn't the name too short?}.
      * 
@@ -67,6 +45,28 @@ public class Messages {
      */
     public static Localizable _HelloWorldBuilder_DescriptorImpl_warnings_tooShort() {
         return new Localizable(holder, "HelloWorldBuilder.DescriptorImpl.warnings.tooShort");
+    }
+
+    /**
+     * Key {@code PrioraBuilder.DescriptorImpl.DisplayName}: {@code
+     * Prioritization of Unit Tests}.
+     * 
+     * @return
+     *     {@code Prioritization of Unit Tests}
+     */
+    public static String PrioraBuilder_DescriptorImpl_DisplayName() {
+        return holder.format("PrioraBuilder.DescriptorImpl.DisplayName");
+    }
+
+    /**
+     * Key {@code PrioraBuilder.DescriptorImpl.DisplayName}: {@code
+     * Prioritization of Unit Tests}.
+     * 
+     * @return
+     *     {@code Prioritization of Unit Tests}
+     */
+    public static Localizable _PrioraBuilder_DescriptorImpl_DisplayName() {
+        return new Localizable(holder, "PrioraBuilder.DescriptorImpl.DisplayName");
     }
 
     /**

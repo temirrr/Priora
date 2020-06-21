@@ -1,0 +1,10 @@
+commit 582fc96111e988cacd403d274df4752434bc5928
+tree d2f9d4b082b47c79bdfad9dd80f26d5e145ab190
+parent f4097b168b34fa3ce44bf83aa7df85c332f939b3
+author fesiib <tlekbay.b@gmail.com> 2020-06-21 23:35:56 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-21 23:35:56 +0900
+
+    Plugin Restart and number of builds Check
+
+
+:100644 100644 fc08b4ac5cd916b69ee5835f2db03a6f4c7d43d2 e83f80a41117bb0b2a2d85df6d108ac22eb938ec M	Jenkinsfile

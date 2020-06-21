@@ -255,7 +255,7 @@
   height: 2.25em;
   line-height: 2.25em;
 }
-#jenkins .jenkins-config table td select {
+#jenkins .jenkins-config table td select:not(.select-ajax-pending) {
   border-radius: 0;
   background: #ffffff;
 }

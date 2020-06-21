@@ -10,10 +10,11 @@ Group-Id: io.jenkins.plugins
 Short-Name: priora
 Long-Name: TODO Plugin
 Minimum-Java-Version: 1.8
-Plugin-Version: 1.0-SNAPSHOT (private-06/18/2020 23:49-tilekbay)
-Hudson-Version: 2.164.3
-Jenkins-Version: 2.164.3
-Plugin-Dependencies: structs:1.20
+Plugin-Version: 1.0-SNAPSHOT (private-e2a0f232-tilekbay)
+Hudson-Version: 2.176.4
+Jenkins-Version: 2.176.4
+Plugin-Dependencies: workflow-api:2.40,workflow-step-api:2.22,junit:1.
+ 29,parameterized-trigger:2.33,script-security:1.71
 Plugin-Developers: 
 Plugin-License-Name: MIT License
 Plugin-License-Url: https://opensource.org/licenses/MIT

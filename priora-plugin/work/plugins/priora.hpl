@@ -3,16 +3,19 @@ Group-Id: io.jenkins.plugins
 Short-Name: priora
 Long-Name: TODO Plugin
 Minimum-Java-Version: 1.8
-Plugin-Version: 1.0-SNAPSHOT (private-2d1fdd6d-tilekbay)
+Plugin-Version: 1.0-SNAPSHOT (private-e2a0f232-tilekbay)
 Hudson-Version: 2.176.4
 Jenkins-Version: 2.176.4
+Plugin-Dependencies: workflow-api:2.40,workflow-step-api:2.22,junit:1.
+ 29,parameterized-trigger:2.33,script-security:1.71
 Plugin-Developers: 
 Plugin-License-Name: MIT License
 Plugin-License-Url: https://opensource.org/licenses/MIT
 Plugin-ScmUrl: https://github.com/jenkinsci/plugin-pom/priora
 Libraries: /home/tilekbay/Documents/4th_semester/CS453/Project/Priora/
  priora-plugin/src/main/resources,/home/tilekbay/Documents/4th_semeste
- r/CS453/Project/Priora/priora-plugin/target/classes
+ r/CS453/Project/Priora/priora-plugin/target/classes,/home/tilekbay/.m
+ 2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar
 Resource-Path: /home/tilekbay/Documents/4th_semester/CS453/Project/Pri
  ora/priora-plugin/src/main/webapp
 

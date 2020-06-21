@@ -1,0 +1,20 @@
+commit 164e0ea0525f02e026faa993994be442f0137861
+tree fc845d20cbdcb9c7461ae7541e7b60a00a22a49e
+parent 336c459ff4bca91f326e34be63cf5fc4b0f2c5e6
+author fesiib <tlekbay.b@gmail.com> 2020-06-19 17:25:46 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-19 17:25:46 +0900
+
+    Implementing Plugin
+
+
+:100644 100644 9ca4af7176badcc117bc2c9845c81dca84790e6a 32724032ad1af9715bcd33beb7a6a4b13330de07 M	Jenkinsfile
+commit 336c459ff4bca91f326e34be63cf5fc4b0f2c5e6
+tree 25c7a58089c040237415a208f3a58176756cb985
+parent e94d8d191411e24933d0a3f96c3adbf9e93dd885
+author fesiib <tlekbay.b@gmail.com> 2020-06-19 17:16:19 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-19 17:16:19 +0900
+
+    Implementing Plugin
+
+
+:100644 100644 8ee76cee8300a10c2f0d8eac3ddf3d2c5b90130c 9ca4af7176badcc117bc2c9845c81dca84790e6a M	Jenkinsfile

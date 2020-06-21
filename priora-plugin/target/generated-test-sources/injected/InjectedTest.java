@@ -8,11 +8,11 @@ public class InjectedTest extends junit.framework.TestCase {
   public static junit.framework.Test suite() throws Exception {
     System.out.println("Running tests for "+"io.jenkins.plugins:priora:1.0-SNAPSHOT");
     Map<String, Object> parameters = new HashMap<String, Object>();
-    parameters.put("basedir","/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin");
+    parameters.put("basedir","/home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin");
     parameters.put("artifactId","priora");
     parameters.put("packaging","hpi");
-    parameters.put("outputDirectory","/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/target/classes");
-    parameters.put("testOutputDirectory","/home/tilekbay/Documents/4th_semester/CS453/Project/priora-plugin/target/test-classes");
+    parameters.put("outputDirectory","/home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/target/classes");
+    parameters.put("testOutputDirectory","/home/tilekbay/Documents/4th_semester/CS453/Project/Priora/priora-plugin/target/test-classes");
     parameters.put("requirePI","true");
     return org.jvnet.hudson.test.PluginAutomaticTestBuilder.build(parameters);
   }
