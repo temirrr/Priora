@@ -61,14 +61,59 @@ class GeneticAlgorithm():
         return initial_population
     
     def crossover(self, p1, p2):
-        crossover_point = random.randint(1, len(p1.order) - 1)
-        rand_int = random.randint(0, 1)
-        if rand_int == 1:
-            child_order = (p1.order[:crossover_point] +  #here could be problem with synchronization, as node should be passed by reference and not by instance
-                     p2.order[crossover_point:])
+        i1, i2 = random.sample(range(len(p1.order) - 1), 2)
+        child_order = [-1]*len(p1.order)
+        if i1<i2:
+            middle = p1.order[i1:i2]
+            child_order[i1:i2] = middle
+            non_middle = p1.order[:i1]+p1.order[i2:]
+            p2_candidates = []
+            for j in range(len(p2.order)):
+                if p2.order[j] not in middle:
+                    p2_candidates.append(p2.order[j])
+            k = 0
+            for j in range(0, i1):
+                child_order[j] = p2_candidates[k]
+                k+=1
+            for j in range(i2, len(p2.order)):
+                child_order[j] = p2_candidates[k]
+                k+=1
+            # k = 0
+            # for j in range(len(p2.order)):
+            #     if child_order[j] == -1:
+            #         child_order[j] = non_middle[k]
+            #         k+=1
+                # else:
+                #     print(k)
+                #     child_order[j] = non_middle[k]
+                #     k += 1
         else:
-            child_order = (p2.order[crossover_point:] +
-                     p1.order[:crossover_point])
+            middle = p1.order[i2:i1]
+            child_order[i2:i1] = middle
+            non_middle = p1.order[:i2]+p1.order[i1:]
+            p2_candidates = []
+            for j in range(len(p2.order)):
+                if p2.order[j] not in middle:
+                    p2_candidates.append(p2.order[j])
+            k = 0
+            for j in range(0, i2):
+                child_order[j] = p2_candidates[k]
+                k+=1
+            for j in range(i1, len(p2.order)):
+                child_order[j] = p2_candidates[k]
+                k+=1
+        # print("parent1", p1.order)
+        # print("parent2", p2.order)
+        # print("i1, i2", i1, i2)
+        # print("Crossover child", child_order)
+        # crossover_point = random.randint(1, len(p1.order) - 1)
+        # rand_int = random.randint(0, 1)
+        # if rand_int == 1:
+        #     child_order = (p1.order[:crossover_point] +  #here could be problem with synchronization, as node should be passed by reference and not by instance
+        #              p2.order[crossover_point:])
+        # else:
+        #     child_order = (p2.order[crossover_point:] +
+        #              p1.order[:crossover_point])
         return ch.Chromosome(child_order, self.tests_info)
     
     def mutate(self,chromosome):
@@ -112,12 +157,12 @@ class GeneticAlgorithm():
         return new_population
 
     def generate_solution(self):
-        ref_dirs = get_reference_directions("das-dennis", 2, n_partitions=8)
+        ref_dirs = get_reference_directions("das-dennis", 3, n_partitions=8)
         selection = get_selection('tournament',func_comp=feasability_tournament,pressure=self.tournament_size)
         algorithm = NSGA2(pop_size=self.population_size, sampling=GA_wrapper.PrioSampling(), selection = selection,
                             crossover=GA_wrapper.PrioCrossover(), mutation=GA_wrapper.PrioMutation(),
                             eliminate_duplicates=False)
-        res = minimize(GA_wrapper.PrioProblem(2,  self),
+        res = minimize(GA_wrapper.PrioProblem(3,  self),
                        algorithm,
                        seed=1,
                        verbose=True,

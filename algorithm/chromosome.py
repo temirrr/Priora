@@ -1,5 +1,5 @@
 class Chromosome():
-    def __init__(self, order, tests_info):
+    def __init__(self, order,tests_info):
         self.order = order
         self.tests_info = tests_info
         self.fitness = self.get_fitness()
@@ -11,17 +11,42 @@ class Chromosome():
 
     #maximazi both objectives, in return they are insersed to minimize
     def get_fitness(self):
+        off1 = self.off1()
+        off2 = self.off2()
+        off3 = self.off3()
+        return (off1, off2, off3)
+
+    def off1(self):
         success_v = 0
-        time_v = 0
-        counter = 0
-        n = len(self.order)
         for test in self.order:
-            counter += 1
-            if(self.tests_info[test][0]):
-                success_v += 1*counter
-            time_v += self.tests_info[test][1] * counter
-        return (success_v, time_v)
-    
+            # print(self.tests_info[test][0])
+            if(self.tests_info.get(test)[0]==1):
+                success_v += 1
+            else:
+                break
+        return success_v
+
+    def off2(self):
+        time_v = self.tests_info[self.order[0]][1]
+        count = 1
+        for i in range(len(self.order)):
+            if i+1< len(self.order) and self.tests_info[self.order[i]][1]<= self.tests_info[self.order[i+1]][1]:
+                time_v += self.tests_info[self.order[i+1]][1]
+                count +=1
+            else:
+                break
+        return time_v/count
+    def off3(self):
+        number = self.tests_info[self.order[0]][2]
+        count = 1
+        for i in range(len(self.order)):
+            if i+1< len(self.order) and self.tests_info[self.order[i]][2]<= self.tests_info[self.order[i+1]][2]:
+                number += self.tests_info[self.order[i+1]][2]
+                count +=1
+            else:
+                break
+        return number/count
+
     def get_infeasability(self):
         if self.infeasability is not None:
             return self.infeasability
