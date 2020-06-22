@@ -47,7 +47,7 @@ Example `step([$class: 'PrioraBuilder', mnCommitInterv: 1, mxCommitInterv: 40343
 ### Priora: Notes
 
 * If project under build contains the same directory `/priora/` change it.
-* Do not change the PATH to `/target/...`, because it accumulated data can be deleted when `mvn clean` is executed.
+* Do not change the PATH to `/target/...`, because all accumulated data can be deleted when `mvn clean` is executed.
 * If `NUMBER_OF_BUILDS_TO_SEARCH` is set to number more than `1`, we do not accumulate data in `$WORKSPACE/PATH/data.xml`, but reread JUnit reports again.
 
 
