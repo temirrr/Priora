@@ -1,0 +1,10 @@
+commit dcf815ea2818b70015ffad2e6382e928fd0ed5d0
+tree 05eebb88e561e63bb677929104d9789dceb499cc
+parent 08961e8a6912aea2ef73e2c6e276c781b6b02783
+author fesiib <tlekbay.b@gmail.com> 2020-06-22 16:21:55 +0900
+committer fesiib <tlekbay.b@gmail.com> 2020-06-22 16:21:55 +0900
+
+    Testing Plugin
+
+
+:100644 100644 e7f537522515ef806b6d62625f81808d6c79cb7f 1012660c50a418c87e442b367bfb3dbaaf497740 M	Jenkinsfile

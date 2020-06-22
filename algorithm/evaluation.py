@@ -1,5 +1,6 @@
 import GA
 import greedy
+import sys
 def normalised_fitness(max,min,point): 
     (f1,f2,f3)=point.get_fitness()
     f=[f1,f2, f3]
@@ -31,11 +32,11 @@ def select_from_front(front):
             
     return front[index]
 
-def main():
-    file = 'tests_info.txt'
+def main(argv):
     tests_info = {}
     tests_name ={}
     tests = []
+<<<<<<< HEAD
     k = 0
     with open(file, 'r') as f:
         while True:
@@ -61,6 +62,22 @@ def main():
             f.write(str(row) + '\n')
         f.close()
 
+=======
+    method = argv[0]
+    for line in argv[1:]:
+        split_line = line.split()
+        tests_info[split_line[0]] = list(map(lambda x: int(x), split_line[1:]))
+        tests.append(split_line[0])
+    if (method == "NSGA"):
+        genalg = GA.GeneticAlgorithm(200,10,300,0.3, tests, tests_info)
+        front, history = genalg.generate_solution()
+        ret = select_from_front(front)
+        print(ret)
+    if (method == "Greedy"):
+        print(greedy.sort(tests_info))
+    if (method == "Random"):
+        print(tests_info.items)
+>>>>>>> origin/master
     return ret
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
