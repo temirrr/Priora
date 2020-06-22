@@ -3,7 +3,7 @@ Group-Id: io.jenkins.plugins
 Short-Name: priora
 Long-Name: TODO Plugin
 Minimum-Java-Version: 1.8
-Plugin-Version: 1.0-SNAPSHOT (private-8807227f-tilekbay)
+Plugin-Version: 1.0-SNAPSHOT (private-c5aaa070-tilekbay)
 Hudson-Version: 2.176.4
 Jenkins-Version: 2.176.4
 Plugin-Dependencies: workflow-api:2.40,workflow-step-api:2.22,junit:1.

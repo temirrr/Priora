@@ -1,7 +1,6 @@
 # Priora
 CI-Integrated Test Prioritization Tool
 
-
 ## How to use priora-plugin
 
 ### Soft 
@@ -18,8 +17,6 @@ $ mvn hpi:run
 priora-plugin:
 * src - source code of plugin
 * target - built files of plugin
-* test-project - test project, currently just simple-maven-project. can be replaced with benchmark
-    - Must be separately pulled from or cloned https://github.com/cs453-team3/test-project
 * work - Data from Jenkins run
 
 ### Test Project
