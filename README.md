@@ -1,7 +1,6 @@
 # Priora
 CI-Integrated Test Prioritization Tool
 
-<<<<<<< HEAD
 =======
 
 ## Plugin Documentary 
@@ -58,7 +57,9 @@ In the ./priora-plugin/ directory
 
 `
 $ mvn clean
+
 $ mvn verify
+
 $ mvn hpi:run
 `
 
