@@ -17,14 +17,15 @@ class Chromosome():
         return (off1, off2, off3)
 
     def off1(self):
-        success_v = 0
-        for test in self.order:
-            # print(self.tests_info[test][0])
-            if(self.tests_info.get(test)[0]==1):
-                success_v += 1
+        fails = self.tests_info[self.order[0]][0]
+        count = 1
+        for i in range(len(self.order)):
+            if i+1< len(self.order) and self.tests_info[self.order[i]][0]<= self.tests_info[self.order[i+1]][0]:
+                fails += self.tests_info[self.order[i+1]][0]
+                count +=1
             else:
                 break
-        return success_v
+        return fails/count
 
     def off2(self):
         time_v = self.tests_info[self.order[0]][1]

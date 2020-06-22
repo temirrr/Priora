@@ -1,16 +1,17 @@
 import GA
 import greedy
 import sys
-def normalised_fitness(max,min,point): 
+import argparse
+def normalised_fitness(max,min,point, weights): 
     (f1,f2,f3)=point.get_fitness()
     f=[f1,f2, f3]
     res=0
     for i in range(3):
         if max[i] != min[i]:
-            res+=0.2*(f[i]-min[i])/(max[i]-min[i])
+            res+=weights[i]*(f[i]-min[i])/(max[i]-min[i])
     return res
 
-def select_from_front(front):
+def select_from_front(front, w1, w2, w3):
     (f1,f2, f3)=front[0].get_fitness()
     max=[f1,f2, f3]
     min=[f1,f2, f3]
@@ -23,21 +24,22 @@ def select_from_front(front):
             if f[obj]<min[obj]:
                 min[obj]=f[obj]
     index=0
-    best=normalised_fitness(max,min,front[0])
+    best=normalised_fitness(max,min,front[0], [w1, w2, w3])
     for i in range(1,len(front)):
-        f=normalised_fitness(max,min,front[i])
+        f=normalised_fitness(max,min,front[i], [w1, w2, w3])
         if f<best:
             index=i
             best=f
             
     return front[index]
 
-def main(argv):
+def main():
+    algo, w1, w2, w3 = parse_arguments()
     tests_info = {}
     tests_name ={}
     tests = []
-<<<<<<< HEAD
     k = 0
+    file = 'tests_info.txt'
     with open(file, 'r') as f:
         while True:
             buf = f.readline()
@@ -45,39 +47,44 @@ def main(argv):
                 break
             each_name = buf.split()[0]
             each = list(map(lambda x: int(x), buf.split()[1:]))
+            if each[2] == 0:
+                each[0] = 0
+            else:
+                each[0] = each[0]/each[2]
             tests_name[k] = each_name
             tests_info[k] = each
             tests.append(k)
             k += 1
-    genalg = GA.GeneticAlgorithm(200,10,300,0.3, tests, tests_info)
-    front, history = genalg.generate_solution()
-    ret = select_from_front(front)
-    print(ret)
-
-    fout = 'tests_ordering.txt'
-    with open(fout, 'w') as f:
-        for i in range (len(ret.order)):
-            test_name = tests_name[ret.order[i]]
-            row = "{} {}".format(test_name,i)
-            f.write(str(row) + '\n')
-        f.close()
-
-=======
-    method = argv[0]
-    for line in argv[1:]:
-        split_line = line.split()
-        tests_info[split_line[0]] = list(map(lambda x: int(x), split_line[1:]))
-        tests.append(split_line[0])
-    if (method == "NSGA"):
+    if algo=='NSGA':
         genalg = GA.GeneticAlgorithm(200,10,300,0.3, tests, tests_info)
         front, history = genalg.generate_solution()
-        ret = select_from_front(front)
-        print(ret)
-    if (method == "Greedy"):
-        print(greedy.sort(tests_info))
-    if (method == "Random"):
-        print(tests_info.items)
->>>>>>> origin/master
-    return ret
+        ret = select_from_front(front, w1, w2, w3)
+        fout = 'tests_ordering_nsga.txt'
+        with open(fout, 'w') as f:
+            for i in range (len(ret.order)):
+                test_name = tests_name[ret.order[i]]
+                row = "{} {}".format(test_name,i)
+                f.write(str(row) + '\n')
+            f.close()
+        return ret
+    elif algo=="GREEDY":
+        order = greedy.sort(tests_info)
+        fout = 'tests_ordering_greedy.txt'
+        with open(fout, 'w') as f:
+            for i in range (len(order)):
+                test_name = tests_name[order[i][0]]
+                row = "{} {}".format(test_name,i)
+                f.write(str(row) + '\n')
+            f.close()
+        return
+
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-a', type=str, default=50, help="algorithm")
+    parser.add_argument('-w1', type=float, default=29, help="weight for 1 objective")
+    parser.add_argument('-w2', type=float, default=0.3, help="weight for 2 objective")
+    parser.add_argument('-w3', type=float, default=False, help="weight for 3 objective")
+    args = parser.parse_args()
+    return args.a, args.w1, args.w2, args.w3
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()

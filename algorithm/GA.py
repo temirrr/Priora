@@ -158,7 +158,8 @@ class GeneticAlgorithm():
 
     def generate_solution(self):
         ref_dirs = get_reference_directions("das-dennis", 3, n_partitions=8)
-        selection = get_selection('tournament',func_comp=feasability_tournament,pressure=self.tournament_size)
+        selection = get_selection('random')
+        #selection = get_selection('tournament',func_comp=feasability_tournament,pressure=self.tournament_size)
         algorithm = NSGA2(pop_size=self.population_size, sampling=GA_wrapper.PrioSampling(), selection = selection,
                             crossover=GA_wrapper.PrioCrossover(), mutation=GA_wrapper.PrioMutation(),
                             eliminate_duplicates=False)
