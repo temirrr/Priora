@@ -55,13 +55,13 @@ Maven v(latest), Java (8)
 ### Run Jenkins Locally
 In the ./priora-plugin/ directory
 
-`
+```
 $ mvn clean
 
 $ mvn verify
 
 $ mvn hpi:run
-`
+```
 
 ### Directories
 priora-plugin:
