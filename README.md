@@ -27,16 +27,20 @@ Add above step after build and add Junit Report step then Priora will prioritize
 
 Additional parameters can be specified:
 
+* `mxCommitInterv` : Default - `60000L`, Maximum Commit Interval;
+* `mnCommitInterv` : Default - `100L`, Minimum Commit Interval, not sharp;
+* `NUMBER_OF_BUILDS_TO_SEARCH` : Default - `1`. Number of previous builds that we want to consider, must be a positive number, if set to `1`, we consider all previous build reports
+* `prioraMethod` : By Default - `'NSGA'`, can be specified to `'Greedy'` or `'Random'`
+
+* `path` : The PATH can be specified using this parameter. Default - `['priora']`
+* `restart` : Default - `false`, if you want to delete all accumulated data stored in Jenkins Workspace can be set to `true`
+
 * Order will be printed in file `$WORKSPACE/PATH/testsOrder.txt`
 * Data will be accumulated in = `$WORKSPACE/PATH/data.xml`
 * Script used for executing tests will be in `$WORKSPACE/exectests`
-* `path` : The PATH can be specified using this parameter. Default - `['priora']`
-* `prioraMethod` : By Default - `'NSGA'`, can be specified to `'Greedy'` or `'Random'`
-* `NUMBER_OF_BUILDS_TO_SEARCH` : Default - `1`. Number of previous builds that we want to consider, must be a positive number, if set to `1`, we consider all previous build reports
-* `restart` : Default - `false`, if you want to delete all accumulated data stored in Jenkins Workspace can be set to `true`
-* `mxCommitInterv` : Default - `60000L`, Maximum Commit Interval;
-* `mnCommitInterv` : Default - `100L`, Minimum Commit Interval, not sharp;
 
+
+Example `step([$class: 'PrioraBuilder', mnCommitInterv: 1, mxCommitInterv: 40343, restart: false, NUMBER_OF_BUILDS_TO_SEARCH: 10, prioraMethod: 'Greedy', path: ['priora_example']])`
 
 @temirrr
 
