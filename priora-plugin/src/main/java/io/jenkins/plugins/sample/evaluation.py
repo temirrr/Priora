@@ -7,8 +7,6 @@ def lineprint(tests):
 def main(argv):
     tests_info = {}
     tests = []
-    f = open("check.txt", "w")
-    print(argv, file = f)
     method = argv[0]
     for line in argv[1:]:
         split_line = line.split()
