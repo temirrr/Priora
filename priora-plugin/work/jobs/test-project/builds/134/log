@@ -1,0 +1,18 @@
+Started by user unknown or anonymous
+hudson.plugins.git.GitException: Command "git fetch --tags --progress --prune origin +refs/heads/master:refs/remotes/origin/master" returned status code 128:
+stdout: 
+stderr: fatal: unable to access 'https://github.com/cs453-team3/test-project/': gnutls_handshake() failed: Error in the pull function.
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2430)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2044)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$500(CliGitAPIImpl.java:81)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:569)
+	at jenkins.plugins.git.GitSCMFileSystem$BuilderImpl.build(GitSCMFileSystem.java:352)
+	at jenkins.scm.api.SCMFileSystem.of(SCMFileSystem.java:197)
+	at jenkins.scm.api.SCMFileSystem.of(SCMFileSystem.java:173)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:115)
+	at org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition.create(CpsScmFlowDefinition.java:69)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:309)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+Finished: FAILURE

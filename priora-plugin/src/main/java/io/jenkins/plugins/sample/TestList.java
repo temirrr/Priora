@@ -70,4 +70,12 @@ public class TestList {
     public void clear() {
         this.list.clear();
     }
+
+    public List<String> toListString() {
+        List<String> ret = new ArrayList<>();
+        for (int i = 0; i < this.size(); i++) {
+            ret.add(this.get(i).toString());
+        }
+        return ret;
+    }
 }

@@ -119,6 +119,11 @@ public class TestCaseClass implements Comparable<TestCaseClass> {
             return 1;
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return this.getCaseName() + " " + Long.toString(this.getFail()) + " " + Long.toString(this.getAvgDuration()) + " " + Long.toString(this.getRun());
+    }
     
     public String getSourceFileName(String extension) {
         return this.caseName.replace('.', '/') + extension;

@@ -4,7 +4,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -33,11 +37,17 @@ import jenkins.tasks.SimpleBuildStep;
 
 import io.jenkins.plugins.sample.TestList;
 import io.jenkins.plugins.sample.TestCaseClass;
+import io.jenkins.plugins.sample.ScriptRunner;
+import io.jenkins.plugins.sample.ScriptPython;
 
 public class PrioraBuilder extends Builder implements SimpleBuildStep {
-    public static final String testReportFile = "tests_info";
+    public static final String testReportFile = "testsOrder";
     public static final String dataStoreFile = "data";
+    public static final String scriptFile = "evaluation";
+    public static final String execTests = "exectests";
     
+    private String[] path = new String[]{"priora"};
+
     private String prioraMethod = "NSGA";
     
     private int NUMBER_OF_BUILDS_TO_SEARCH = 1;
@@ -54,8 +64,14 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         this.prioraMethod = "NSGA";
         this.NUMBER_OF_BUILDS_TO_SEARCH = 1;
         this.restart = false;
+        this.path = new String[]{"priora"};
     }
     
+    @DataBoundSetter
+    public void setPath(String... path) {
+        this.path = path;
+    } 
+
     @DataBoundSetter
     public void setRestart(boolean restart) {
         this.restart = restart;
@@ -81,12 +97,12 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         this.mnCommitInterv = mnCommitInterv;
     }
 
+    public String[] getPath() {
+        return this.path.clone();
+    } 
+
     public boolean getRestart() {
         return this.restart;
-    }
-    
-    public String getTestReportFile() {
-        return this.testReportFile;
     }
     
     public String getPrioraMethod() {
@@ -104,11 +120,31 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
     public long getMnCommitInterv() {
         return this.mnCommitInterv;
     }
+
+    private FilePath getFilePath(FilePath workspace) {
+        FilePath ret = workspace;
+        String[] path = this.getPath();
+        for (int i = 0; i < path.length; i++) {
+            ret = ret.child(path[i]);
+        }
+        return ret;
+    }
+
+    private String getRelativeFilePath() {
+        StringBuilder ret = new StringBuilder();
+        ret.append("./");
+        String[] path = this.getPath();
+        for (int i = 0; i < path.length; i++) {
+            ret.append(path[i]);
+            ret.append("/");
+        }
+        return ret.toString();
+    }
     
     public TestList getPrevTestResults(Run<?, ?> run, FilePath workspace, TaskListener listener) {
         TestList ret = new TestList();
         int included = 0;
-        while(included < this.getNUMBER_OF_BUILDS_TO_SEARCH()) {
+        while (included < this.getNUMBER_OF_BUILDS_TO_SEARCH()) {
             run = (Run<?, ?>)run.getPreviousBuild();
             if (run == null) {
                 break;
@@ -141,14 +177,10 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
     }
     
     public static String inputStreamToString(InputStream inputStream) throws IOException {
-        return IOUtils.toString(inputStream, "UTF-8");
+        return IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
     }
     
-    public static TestList parseAcc(Run<?, ?> run, FilePath workspace, TaskListener listener) {
-        if (workspace == null) {
-            return new TestList();
-        }
-        FilePath dir = workspace.child("priora").child(dataStoreFile + ".xml");
+    public static TestList parseAcc(Run<?, ?> run, FilePath workspace, TaskListener listener, FilePath dir) throws InterruptedException, IOException {
         TestList tests = new TestList();
         try {
             JAXBContext context = JAXBContext.newInstance(io.jenkins.plugins.sample.TestList.class);
@@ -157,15 +189,18 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
             tests = (TestList) unmarshaller.unmarshal(dir.read());
         } catch (JAXBException e) {
             e.printStackTrace(listener.getLogger());
-        } catch (Throwable e) {
-            e.printStackTrace(listener.getLogger());    
+        } catch(InterruptedException e) {
+            throw e;
+        } catch(IOException e) {
+            throw e;
+        } catch(Throwable e) {
+            e.printStackTrace(listener.getLogger());
         }
         
         return tests;
     }
     
-    public static void updateAcc(Run<?, ?> run, FilePath workspace, TaskListener listener, TestList tests) {
-        FilePath dir = workspace.child("priora").child(dataStoreFile + ".xml");
+    public static void updateAcc(Run<?, ?> run, FilePath workspace, TaskListener listener, TestList tests, FilePath dir) throws InterruptedException, IOException{
         try {
             dir.delete();
         }
@@ -186,41 +221,53 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
 
             jaxbMarshaller.marshal(tests, sw);
             String xmlString = sw.toString();
-            dir.write(xmlString, "UTF-8");
+            dir.write(xmlString, StandardCharsets.UTF_8.name());
         } catch (JAXBException e) 
         {
             e.printStackTrace(listener.getLogger());
-        } catch (Throwable e) {
-            e.printStackTrace(listener.getLogger());    
+        } catch(InterruptedException e) {
+            throw e;
+        } catch(IOException e) {
+            throw e;
+        } catch(Throwable e) {
+            e.printStackTrace(listener.getLogger());
         }
     }
     
-    public void update(Run<?, ?> run, FilePath workspace, Launcher launcher, TaskListener listener) {
+    public TestList update(Run<?, ?> run, FilePath workspace, Launcher launcher, TaskListener listener) throws InterruptedException, IOException {
         TestList tests = new TestList();
-        FilePath dir = workspace.child("priora").child(dataStoreFile + ".xml");
+        FilePath dir = this.getFilePath(workspace).child(dataStoreFile + ".xml");
         if (this.getRestart()) {
-            updateAcc(run, workspace, listener, tests);
-            return;
+            updateAcc(run, workspace, listener, tests, dir);
+            return tests;
         }
         try {
             if (!dir.exists() || this.getNUMBER_OF_BUILDS_TO_SEARCH() != 1) {
                 tests = new TestList();
             }
             else {
-                tests = parseAcc(run, workspace, listener);
+                tests = parseAcc(run, workspace, listener, dir);
             }
-        }
-        catch (Throwable throwable) {
-            throwable.printStackTrace(listener.getLogger());
-        }
-        TestList prevTests = this.getPrevTestResults(run, workspace, listener);
+        } catch(InterruptedException e) {
+            throw e;
+        } catch(IOException e) {
+            throw e;
+        } catch(Throwable e) {
+            e.printStackTrace(listener.getLogger());
+        }TestList prevTests = this.getPrevTestResults(run, workspace, listener);
         
         tests.sort();
         prevTests.sort();
-        listener.getLogger().println(tests.size());
-        listener.getLogger().println(prevTests.size());
         TestList combined = new TestList(); 
-        int i = 0;
+        try {
+            for (int i = 0; i < tests.size(); i++)
+                combined.add_NO_DUPLICATE(tests.get(i));
+            for (int i = 0; i < prevTests.size(); i++)
+                combined.add_NO_DUPLICATE(prevTests.get(i));
+        } catch (Throwable e) {
+            e.printStackTrace(listener.getLogger());
+        }
+                /*int i = 0;
         for (int j = 0; j < prevTests.size(); ++j) {
             if (i >= tests.size()) {
                 combined.add(prevTests.get(j));
@@ -246,10 +293,43 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
             combined.add(tests.get(i));
             i++;
         }
-        listener.getLogger().println(combined.size());
+        */
+        //listener.getLogger().println(combined.size());
         prevTests.clear();
         tests.clear();
-        updateAcc(run, workspace, listener, combined);
+        updateAcc(run, workspace, listener, combined, dir);
+        return combined;
+    }
+
+    public String truncate(TestList tests, List<String> order) throws InterruptedException{
+        Map <String, Long> execTime = new TreeMap<>();
+        
+        for (int i = 0; i < tests.size(); i++) {
+            execTime.put(tests.get(i).getCaseName(), tests.get(i).getAvgDuration());
+        }
+        
+        long limit = (long)(Math.random() * (this.getMxCommitInterv() - this.getMnCommitInterv())) + this.getMnCommitInterv();
+        limit = Math.min(limit, this.getMxCommitInterv()); 
+
+        long sum = 0;
+        StringBuffer content = new StringBuffer();
+        boolean firstOut = true;
+        for (String line : order) {
+            long cur = execTime.getOrDefault(line, -1L);
+            if (cur == -1L) {
+                throw new InterruptedException("Something went wrong");
+            }
+            sum += cur;
+            if (sum > limit) break;
+            if (firstOut) {
+                content.append(line);
+                firstOut = false;
+            }    
+            else {
+                content.append(System.lineSeparator() + line);
+            }
+        }
+        return content.toString();
     }
     
     public void perform(Run<?, ?> run, FilePath workspace, Launcher launcher, TaskListener listener) throws InterruptedException, IOException {
@@ -259,10 +339,50 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         
         listener.getLogger().printf("Prioritizing...%n");
         listener.getLogger().printf("MinCommitInterval: %d, MaxCommitInterval: %d (in milliseconds)%n", this.mnCommitInterv, this.mxCommitInterv);
+        listener.getLogger().println(this.getRelativeFilePath());
         
-        this.update(run, workspace, launcher, listener);
+        TestList tests = this.update(run, workspace, launcher, listener);
 
-        //TODO: Integrate Algorithm
+        ScriptPython script = new ScriptPython();
+        List<String> order = new ArrayList<>();
+        try {
+            order = script.runScript(tests.toListString(), this.getPrioraMethod(), scriptFile, listener);
+        } catch(InterruptedException e) {
+            throw e;
+        } catch(IOException e) {
+            throw e;
+        } catch(Throwable e) {
+            e.printStackTrace(listener.getLogger());
+        }
+        String content = "";
+        FilePath dir = this.getFilePath(workspace).child(testReportFile + ".txt");
+
+        try {
+            if (order.isEmpty()) {
+                dir.delete();
+                return;
+            }    
+            content = this.truncate(tests, order);
+            dir.write(content, StandardCharsets.UTF_8.name());
+            //listener.getLogger().println(content);
+            dir.chmod(0666);
+        } catch(InterruptedException e) {
+            throw e;
+        } catch(IOException e) {
+            throw e;
+        } catch(Throwable e) {
+            e.printStackTrace(listener.getLogger());
+        }
+        
+        try {
+            ScriptRunner.writeScriptRunner(workspace.child(execTests), this.getRelativeFilePath() + testReportFile + ".txt");    
+        } catch(InterruptedException e) {
+            throw e;
+        } catch(IOException e) {
+            throw e;
+        } catch(Throwable e) {
+            e.printStackTrace(listener.getLogger());
+        }
     }
 
     @Symbol("priora")
