@@ -57,6 +57,8 @@ Maven v(latest), Java (8)
 In the ./priora-plugin/ directory
 
 `
+$ mvn clean
+$ mvn verify
 $ mvn hpi:run
 `
 
