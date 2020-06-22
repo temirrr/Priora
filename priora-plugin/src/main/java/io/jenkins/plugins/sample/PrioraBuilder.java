@@ -1,8 +1,15 @@
 package io.jenkins.plugins.sample;
 
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -45,27 +52,36 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
     public static final String dataStoreFile = "data";
     public static final String scriptFile = "evaluation";
     public static final String execTests = "exectests";
-    
+    public static final String analysisFile = "analysis";
+
     private String[] path = new String[]{"priora"};
 
-    private String prioraMethod = "NSGA";
+    private String prioraMethod = "NSGA"; // "NSGA", "Greedy"
     
     private int NUMBER_OF_BUILDS_TO_SEARCH = 1;
 
     private boolean restart = false;
 
     private long mxCommitInterv = 60000L;
-    private long mnCommitInterv = 100L;
+    private long mnCommitInterv = 0L;
+
+    private Double[] weights = new Double[]{0.33, 0.33, 0.33};
 
     @DataBoundConstructor
     public PrioraBuilder() {
         this.mxCommitInterv = 60000L;
-        this.mnCommitInterv = 100L;
+        this.mnCommitInterv = 0L;
         this.prioraMethod = "NSGA";
         this.NUMBER_OF_BUILDS_TO_SEARCH = 1;
         this.restart = false;
         this.path = new String[]{"priora"};
+        this.weights = new Double[]{0.33, 0.33, 0.33};
     }
+    
+    @DataBoundSetter
+    public void setWeights(Double... weights) {
+        this.weights = weights;
+    } 
     
     @DataBoundSetter
     public void setPath(String... path) {
@@ -95,6 +111,10 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
     @DataBoundSetter
     public void setMnCommitInterv(long mnCommitInterv) {
         this.mnCommitInterv = mnCommitInterv;
+    }
+
+    public Double[] getWeights() {
+        return this.weights.clone();
     }
 
     public String[] getPath() {
@@ -313,7 +333,6 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
 
         long sum = 0;
         StringBuffer content = new StringBuffer();
-        boolean firstOut = true;
         for (String line : order) {
             long cur = execTime.getOrDefault(line, -1L);
             if (cur == -1L) {
@@ -321,13 +340,7 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
             }
             sum += cur;
             if (sum > limit) break;
-            if (firstOut) {
-                content.append(line);
-                firstOut = false;
-            }    
-            else {
-                content.append(System.lineSeparator() + line);
-            }
+            content.append(line + System.lineSeparator());
         }
         return content.toString();
     }
@@ -337,6 +350,8 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
             throw new AbortException("no workspace");
         }
         
+        this.analyzePrevBuild(run, workspace, launcher, listener);
+
         listener.getLogger().printf("Prioritizing...%n");
         listener.getLogger().printf("MinCommitInterval: %d, MaxCommitInterval: %d (in milliseconds)%n", this.mnCommitInterv, this.mxCommitInterv);
         listener.getLogger().println(this.getRelativeFilePath());
@@ -346,7 +361,7 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         ScriptPython script = new ScriptPython();
         List<String> order = new ArrayList<>();
         try {
-            order = script.runScript(tests.toListString(), this.getPrioraMethod(), scriptFile, listener);
+            order = script.runScript(tests.toListString(), this.getPrioraMethod(), this.getWeights(), scriptFile, listener);
         } catch(InterruptedException e) {
             throw e;
         } catch(IOException e) {
@@ -375,13 +390,73 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         }
         
         try {
-            ScriptRunner.writeScriptRunner(workspace.child(execTests), this.getRelativeFilePath() + testReportFile + ".txt");    
+            ScriptRunner.writeScriptRunner(this.getFilePath(workspace).child(execTests), this.getRelativeFilePath() + testReportFile + ".txt");    
         } catch(InterruptedException e) {
             throw e;
         } catch(IOException e) {
             throw e;
         } catch(Throwable e) {
             e.printStackTrace(listener.getLogger());
+        }
+    }
+
+    public void analyzePrevBuild(Run<?, ?> run, FilePath workspace, Launcher launcher, TaskListener listener) throws IOException, InterruptedException {
+        FilePath dir = getFilePath(workspace).child(analysisFile + ".xml");
+        while (true) {
+            run = (Run<?, ?>)run.getPreviousBuild();
+            if (run == null) {
+                break;
+            }
+            if (!run.isBuilding()) {
+                AbstractTestResultAction tra = (AbstractTestResultAction)run.getAction((Class)AbstractTestResultAction.class);
+                if (tra != null) {
+                    Object o = tra.getResult();
+                    if (o instanceof TestResult) {
+                        listener.getLogger().printf("Analyzing build #%d%n", run.getNumber());
+                        TestResult testRes = (TestResult)o;
+                        int buildNumber = run.getNumber();
+                        long tests = testRes.getFailCount() + testRes.getPassCount();
+                        long fails = testRes.getFailCount();
+                        long duration = (long)(testRes.getDuration() * 1000L); //(in milliseconds)
+                        
+                        listener.getLogger().printf("Analysis %d %d %d %d%n", buildNumber, tests, fails, duration);
+                        
+                        Analysis info = new Analysis(buildNumber, tests, fails, duration);
+                        try
+                        {
+                            JAXBContext jaxbContext = JAXBContext.newInstance(io.jenkins.plugins.sample.Analysis.class);
+                            
+                            //Create Marshaller
+                            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+                
+                            //Required formatting??
+                            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+                            
+                            StringWriter sw = new StringWriter();
+
+                            jaxbMarshaller.marshal(info, sw);
+                            String xmlString = sw.toString() + System.lineSeparator();
+                           
+                            File f = new File(dir.toURI());
+                            FileOutputStream fos = new FileOutputStream(f, true);
+                            OutputStreamWriter wrt = new OutputStreamWriter(fos, StandardCharsets.UTF_8.name());
+                            wrt.append(xmlString);
+                            wrt.flush();
+                            wrt.close();
+                            fos.close();
+                        } catch (JAXBException e) {
+                            e.printStackTrace(listener.getLogger());
+                        } catch(InterruptedException e) {
+                            throw e;
+                        } catch(IOException e) {
+                            throw e;
+                        } catch(Throwable e) {
+                            e.printStackTrace(listener.getLogger());
+                        }
+                        break;
+                    }
+                }
+            }
         }
     }
 

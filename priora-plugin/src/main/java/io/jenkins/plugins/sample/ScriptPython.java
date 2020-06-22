@@ -15,8 +15,10 @@ public class ScriptPython {
       this.pb = null;
    }
 
-   public List<String> runScript(List<String> args, String method, String scriptFile, TaskListener listener) throws InterruptedException, IOException {
-      
+   public List<String> runScript(List<String> args, String method, Double[] weights, String scriptFile, TaskListener listener) throws InterruptedException, IOException {
+      for (int i = 0; i < weights.length; i++) {
+         args.add(0, weights[i].toString());
+      }
       args.add(0, method);
       String path = System.getProperty("user.dir") + "/src/main/java/io/jenkins/plugins/sample/";
       args.add(0, path + scriptFile + ".py");

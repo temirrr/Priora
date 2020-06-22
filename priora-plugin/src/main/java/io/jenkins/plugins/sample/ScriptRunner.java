@@ -8,7 +8,7 @@ public class ScriptRunner {
     public static final String sep = System.lineSeparator();
     public static final String scriptPrefix = "#!/bin/bash " + sep + "input=\"";
     public static final String scriptSuffix = "\"" + sep + "while read -r line" + sep + "do" 
-        + sep + "mvn -f ./commons-lang/pom.xml -Dtest=\"$line\" surefire:test" + sep + "done < \"$input\"";
+        + sep + "mvn -Dtest=\"$line\" surefire:test" + sep + "done < \"$input\"";
     public static void writeScriptRunner(FilePath dir, String fileName) throws Throwable {
         String script = scriptPrefix + fileName + scriptSuffix;
         try {
