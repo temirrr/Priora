@@ -14,6 +14,7 @@
   <description>Test Project</description>
   <keepDependencies>false</keepDependencies>
   <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
     <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
       <triggers>
         <org.jenkinsci.plugins.gwt.GenericTrigger plugin="generic-webhook-trigger@1.67">

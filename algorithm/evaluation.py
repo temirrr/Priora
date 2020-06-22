@@ -36,7 +36,6 @@ def main(argv):
     tests_info = {}
     tests_name ={}
     tests = []
-<<<<<<< HEAD
     k = 0
     with open(file, 'r') as f:
         while True:
@@ -61,23 +60,6 @@ def main(argv):
             row = "{} {}".format(test_name,i)
             f.write(str(row) + '\n')
         f.close()
-
-=======
-    method = argv[0]
-    for line in argv[1:]:
-        split_line = line.split()
-        tests_info[split_line[0]] = list(map(lambda x: int(x), split_line[1:]))
-        tests.append(split_line[0])
-    if (method == "NSGA"):
-        genalg = GA.GeneticAlgorithm(200,10,300,0.3, tests, tests_info)
-        front, history = genalg.generate_solution()
-        ret = select_from_front(front)
-        print(ret)
-    if (method == "Greedy"):
-        print(greedy.sort(tests_info))
-    if (method == "Random"):
-        print(tests_info.items)
->>>>>>> origin/master
     return ret
 if __name__ == "__main__":
     main(sys.argv[1:])
