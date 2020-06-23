@@ -15,8 +15,6 @@ do
   # execute single test
   mvn -Dtest="$line" surefire:test -DsuffixName="$test_number"
 
-  test_number=`expr $test_number + 1`
-
   # if it has failed and is the 1st test to fail, record the time
   if [[ "$?" -ne 0 ]] && [ "$failure_happened" = false ] ; then
     failure_happened=true
@@ -25,6 +23,9 @@ do
 
     printf "Test Failed, time to first failure: $time_to_failure seconds\n" >> "$output"
   fi
+  
+  test_number=`expr $test_number + 1`
+
 done < "$input"
 
 if [ "$failure_happened" = false ] ; then

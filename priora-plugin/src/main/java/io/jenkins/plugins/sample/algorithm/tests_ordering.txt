@@ -1,0 +1,2 @@
+com.mycompany.app.AppTest#testAppConstructor
+com.mycompany.app.AppTest#testAppMain
