@@ -332,11 +332,11 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         limit = Math.min(limit, this.getMxCommitInterv()); 
 
         long sum = 0;
-        StringBuffer content = new StringBuffer();
+        StringBuilder content = new StringBuilder();
         for (String line : order) {
             long cur = execTime.getOrDefault(line, -1L);
             if (cur == -1L) {
-                throw new InterruptedException("Something went wrong");
+                throw new InterruptedException("Something went wrong because of: " + line);
             }
             sum += cur;
             if (sum > limit) break;
@@ -356,6 +356,16 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         listener.getLogger().printf("MinCommitInterval: %d, MaxCommitInterval: %d (in milliseconds)%n", this.mnCommitInterv, this.mxCommitInterv);
         listener.getLogger().println(this.getRelativeFilePath());
         
+        try {
+            ScriptRunner.writeScriptRunner(this.getFilePath(workspace).child(execTests), this.getRelativeFilePath() + testReportFile + ".txt", this.getRelativeFilePath() + analysisFile + ".xml");    
+        } catch(InterruptedException e) {
+            throw e;
+        } catch(IOException e) {
+            throw e;
+        } catch(Throwable e) {
+            e.printStackTrace(listener.getLogger());
+        }
+
         TestList tests = this.update(run, workspace, launcher, listener);
 
         ScriptPython script = new ScriptPython();
@@ -388,16 +398,6 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
         } catch(Throwable e) {
             e.printStackTrace(listener.getLogger());
         }
-        
-        try {
-            ScriptRunner.writeScriptRunner(this.getFilePath(workspace).child(execTests), this.getRelativeFilePath() + testReportFile + ".txt");    
-        } catch(InterruptedException e) {
-            throw e;
-        } catch(IOException e) {
-            throw e;
-        } catch(Throwable e) {
-            e.printStackTrace(listener.getLogger());
-        }
     }
 
     public void analyzePrevBuild(Run<?, ?> run, FilePath workspace, Launcher launcher, TaskListener listener) throws IOException, InterruptedException {
@@ -422,6 +422,16 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
                         listener.getLogger().printf("Analysis %d %d %d %d%n", buildNumber, tests, fails, duration);
                         
                         Analysis info = new Analysis(buildNumber, tests, fails, duration);
+                        try {        
+                            if (!dir.exists()) {
+                                dir.write("", StandardCharsets.UTF_8.name());
+                                listener.getLogger().println("Created" + analysisFile);
+                            }
+                        } catch(InterruptedException e) {
+                            throw e;
+                        } catch(IOException e) {
+                            throw e;
+                        }
                         try
                         {
                             JAXBContext jaxbContext = JAXBContext.newInstance(io.jenkins.plugins.sample.Analysis.class);
@@ -436,8 +446,9 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
 
                             jaxbMarshaller.marshal(info, sw);
                             String xmlString = sw.toString() + System.lineSeparator();
-                           
+                            
                             File f = new File(dir.toURI());
+                            
                             FileOutputStream fos = new FileOutputStream(f, true);
                             OutputStreamWriter wrt = new OutputStreamWriter(fos, StandardCharsets.UTF_8.name());
                             wrt.append(xmlString);
@@ -446,8 +457,6 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
                             fos.close();
                         } catch (JAXBException e) {
                             e.printStackTrace(listener.getLogger());
-                        } catch(InterruptedException e) {
-                            throw e;
                         } catch(IOException e) {
                             throw e;
                         } catch(Throwable e) {

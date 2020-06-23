@@ -20,7 +20,7 @@ public class ScriptPython {
          args.add(0, weights[i].toString());
       }
       args.add(0, method);
-      String path = System.getProperty("user.dir") + "/src/main/java/io/jenkins/plugins/sample/";
+      String path = System.getProperty("user.dir") + "/src/main/java/io/jenkins/plugins/sample/algorithm/";
       args.add(0, path + scriptFile + ".py");
       args.add(0, "python3");
 

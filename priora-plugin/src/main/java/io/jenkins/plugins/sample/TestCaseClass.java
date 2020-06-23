@@ -19,8 +19,18 @@ public class TestCaseClass implements Comparable<TestCaseClass> {
         this("");
     }
 
+    private static String nameCorrect(String name) {
+        if (name.endsWith(")")) {
+            int k = name.lastIndexOf("(", name.length() - 1);
+            if (k == -1)
+                return name;
+            return name.substring(0, k);
+        }
+        return name;
+    }   
+
     public TestCaseClass(CaseResult cr) {
-        this.caseName = cr.getClassName() + "#" + cr.getName();
+        this.caseName = nameCorrect(cr.getClassName()) + "#" + cr.getName();
         this.fail = cr.getFailCount();
         this.run = cr.getFailCount() + cr.getPassCount();
         this.avgDuration = (long)(cr.getDuration() * 1000);
