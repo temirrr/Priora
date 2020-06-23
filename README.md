@@ -19,6 +19,25 @@ For Maven projects this plugin can:
 
 ### Priora: Integrate Into Pipeline
 
+Add below property and plugin to `pom.xml` file of the target project.
+
+```
+<properties>
+    <suffixName></suffixName>
+</properties>
+```
+
+```
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M4</version>
+        <configuration>
+          <reportNameSuffix>${suffixName}</reportNameSuffix>
+        </configuration>
+      </plugin>
+```
+
 In Descriptive Pipeline:
 `
         step([$class: 'PrioraBuilder'])
