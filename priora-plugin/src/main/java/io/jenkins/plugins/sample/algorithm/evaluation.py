@@ -47,8 +47,15 @@ def main(argv):
             buf = f.readline()
             if not buf:
                 break
-            each_name = buf.split()[0]
-            each = list(map(lambda x: int(x), buf.split()[1:]))
+            line = buf.split()
+            each_name = ""
+            i = 0
+            while i + 3 < len(line):
+                each_name += line[i]
+                if i + 4 < len(line):
+                    each_name += ' '
+                i += 1
+            each = list(map(lambda x: int(x), line[i:]))
             if each[2] == 0:
                 each[0] = 0
             else:
@@ -57,6 +64,7 @@ def main(argv):
             tests_info[k] = each
             tests.append(k)
             k += 1
+            print(k)
     fout = path + 'tests_ordering.txt'
     if k == 0:
         f = open(fout, 'w')
@@ -68,7 +76,7 @@ def main(argv):
         f.close()
         return
     if k > 2 and algo=='NSGA':
-        genalg = GA.GeneticAlgorithm(200,10,300,0.3, tests, tests_info)
+        genalg = GA.GeneticAlgorithm(200,10,100,0.3, tests, tests_info)
         front, history = genalg.generate_solution()
         ret = select_from_front(front, w1, w2, w3)
         with open(fout, 'w') as f:

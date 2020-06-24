@@ -6,14 +6,14 @@ test_number=0
 
 
 if [ ! -f "$input" ]; then
-  mvn surefire:test
+  /home/tmr/apache-maven-3.6.3/bin/mvn surefire:test
   exit 0
 fi
 
 while read -r line
 do
   # execute single test
-  mvn -Dtest="$line" surefire:test -DsuffixName="$test_number"
+  /home/tmr/apache-maven-3.6.3/bin/mvn -Dtest="$line" surefire:test -DsuffixName="$test_number"
 
   # if it has failed and is the 1st test to fail, record the time
   if [[ "$?" -ne 0 ]] && [ "$failure_happened" = false ] ; then

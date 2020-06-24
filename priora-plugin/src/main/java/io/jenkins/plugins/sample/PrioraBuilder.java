@@ -180,6 +180,24 @@ public class PrioraBuilder extends Builder implements SimpleBuildStep {
                         cur.addAll((List<CaseResult>)testRes.getPassedTests());
                         for (int j = 0; j < cur.size(); ++j) {
                             TestCaseClass now = new TestCaseClass((CaseResult)cur.get(j));
+                            
+                            //Simulating changes in code???
+                            long rns = now.getRun();
+                            long fails = now.getFail();
+                            if (rns > 0) {
+                                if (fails > 0) {
+                                    if (Math.random() < 0.2)
+                                        fails = 0;
+                                }
+                                else {
+                                    if (Math.random() < 0.5) {
+                                        fails = rns;
+                                    }
+                                }
+                            }
+                            now.setFail(fails);
+                            /// Ends here
+
                             try {
                                 ret.add_NO_DUPLICATE(now);
                             } catch(Throwable e) {
